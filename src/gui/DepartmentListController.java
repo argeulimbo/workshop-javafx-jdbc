@@ -43,7 +43,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 	private TableColumn<Department, String> tableColumnName;
 
 	@FXML
-	private TableColumn<Department, Department> tableColumnEdit;
+	private TableColumn<Department, Department> tableColumnEDIT;
 
 	@FXML
 	private Button btNew;
@@ -113,8 +113,8 @@ public class DepartmentListController implements Initializable, DataChangeListen
 	}
 
 	private void initEditButtons() {
-		tableColumnEdit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
-		tableColumnEdit.setCellFactory(param -> new TableCell<Department, Department>() {
+		tableColumnEDIT.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
+		tableColumnEDIT.setCellFactory(param -> new TableCell<Department, Department>() {
 			private final Button button = new Button("edit");
 
 			@Override
